@@ -17,7 +17,7 @@ on:
       - 'uv.lock'
       - '.github/worflows/ci.yml'
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -57,7 +57,7 @@ jobs:
       - name: Run static checker
         run: uv run mypy src tests
   cleanup:
-    needs: [tests, lint]
+    needs: [test, lint]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
