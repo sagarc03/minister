@@ -5,7 +5,7 @@ on:
       - 'main'
     paths:
       - '**.py'
-      - 'pyprojec.toml'
+      - 'pyproject.toml'
       - 'uv.lock'
       - '.github/worflows/ci.yml'
   pull_request:
