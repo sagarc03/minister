@@ -1,0 +1,68 @@
+[project]
+
+name = "minister"
+version = "0.1.0"
+description = "a primitive record matching library"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Sagar Chavan", email = "sagar.c.03@gmail.com" }]
+maintainers = [{ name = "Sagar Chavan", email = "sagar.c.03@gmail.com" }]
+license = { text = "MIT License" }
+classifiers = [
+  # Project Maturity - Uncomment only one option at a time
+  "Development Status :: 1 - Planning",
+  # "Development Status :: 2 - Pre-Alpha",
+  # "Development Status :: 3 - Alpha",
+  # "Development Status :: 3 - Beta",
+  # "Development Status :: 5 - Production/Stable",
+  # "Development Status :: 6 - Mature",
+  # "Development Status :: 7 - Inactive",
+
+  # Indicate who your project is intended for
+  "Intended Audience :: Developers",
+  "Intended Audience :: Education",
+  "Intended Audience :: Science/Research",
+
+  # Topic
+
+
+  # License 
+  "License :: OSI Approved :: MIT License",
+
+  # Supported Python versions
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+keywords = ["matching", "reconciliation"]
+dependencies = []
+
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[dependency-groups]
+dev = ["pytest>=8.3.4"]
+lint = [
+    "mypy>=1.13.0",
+    "ruff>=0.8.1",
+]
+
+[tool.ruff]
+# Set the maximum line length to 79.
+line-length = 72
+
+[tool.ruff.lint]
+extend-select = ["E501", "UP", "D", "S", "B", "EM", "G", "T20", "PT"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "pep257"
+
+[tool.mypy]
+python_executable = ".venv/bin/python"
+
+[tool.pyright]
+venv = ".venv"
+venvPath = "."
